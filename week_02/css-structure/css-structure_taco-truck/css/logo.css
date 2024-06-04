@@ -1,0 +1,6 @@
+.logo {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem;
+  max-width: fit-content;
+}
