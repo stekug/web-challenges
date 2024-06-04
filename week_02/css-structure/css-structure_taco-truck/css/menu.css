@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   justify-content: start;
   gap: 1rem;
-  margin-right: 1.5rem;
 }
 .food-menu__meal-card {
   background-color: var(--card-bg);
