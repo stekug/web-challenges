@@ -1,4 +1,4 @@
-.menu {
+.food-menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   gap: 1rem;
   margin-right: 1.5rem;
 }
-.menu__meal-card {
+.food-menu__meal-card {
   background-color: var(--card-bg);
   max-width: 400px;
   padding: 0.5rem;
