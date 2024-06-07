@@ -14,14 +14,14 @@ if (SUPER_SECRET_PASSWORD === receivedPassword) {
 // Part 2: Even / Odd
 const number = 6;
 
-if (number % 2 === 0) {
+if (0) {
   console.log("even number");
 } else {
   console.log("odd number");
 }
 
 // Part 3: Hotdogs
-const numberOfHotdogs = 50;
+const numberOfHotdogs = 25;
 let hotdogPrice = 0;
 
 if (numberOfHotdogs < 5) {
@@ -36,7 +36,9 @@ if (numberOfHotdogs < 5) {
 
 if (numberOfHotdogs >= 1) {
   const payAmount = numberOfHotdogs * hotdogPrice;
-  console.log(`You have to pay ${payAmount} € for your Hotdogs!`);
+  console.log(
+    `You have to pay ${payAmount} € for your Hotdogs! One Hotdog cost you ${hotdogPrice} €`
+  );
 } else {
   console.log("Please buy a Hotdog!");
 }
