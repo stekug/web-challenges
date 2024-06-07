@@ -37,6 +37,7 @@ logSeparator(2);
 
 function greet(firstName) {
   console.log(`Welcome ${firstName}, good to see you again!`);
+  // console.log("Welcome " + firstName + ", good to see you again!");
 }
 
 greet("Alice");

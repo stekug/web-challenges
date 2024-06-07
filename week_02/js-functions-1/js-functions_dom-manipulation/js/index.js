@@ -12,32 +12,32 @@ We want to add some functionality to the buttons on this page. When pressing a b
 */
 
 redButton.addEventListener("click", () => {
-  removeColor(redButton);
-  addColor(redButton, "red");
+  removeColor();
+  addColor("red");
   // use your functions to
   // - remove all classes
   // - then add the class name: "red"
 });
 
 blueButton.addEventListener("click", () => {
-  removeColor(blueButton);
-  addColor(blueButton, "blue");
+  removeColor();
+  addColor("blue");
   // use your functions to
   // - remove all classes
   // - then add the class name: "blue"
 });
 
 greenButton.addEventListener("click", () => {
-  removeColor(greenButton);
-  addColor(greenButton, "green");
+  removeColor();
+  addColor("green");
   // use your functions to
   // - remove all classes
   // - then add the class name: "green"
 });
 
 grayButton.addEventListener("click", () => {
-  removeColor(grayButton);
-  addColor(grayButton, "gray");
+  removeColor();
+  addColor("gray");
   // use your functions to
   // - remove all classes
   // - then add the class name: "gray"
@@ -45,10 +45,12 @@ grayButton.addEventListener("click", () => {
 
 // Write your two functions below:
 
-function addColor(button, color) {
-  button.classList.add(color);
+function addColor(color) {
+  box.classList.add(color);
 }
 
-function removeColor(button) {
-  button.className = "";
+function removeColor() {
+  box.classList.remove("gray", "green", "blue", "red");
 }
+
+removeColor(box);
