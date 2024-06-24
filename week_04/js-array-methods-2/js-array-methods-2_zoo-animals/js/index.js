@@ -9,7 +9,7 @@ const lowerCaseZooAnimals = zooAnimals.map(function (animals) {
 });
 
 function hasAnimal(animals, animalName) {
-  if (lowerCaseZooAnimals.includes(animalName.toLowerCase())) {
+  if (animals.includes(animalName.toLowerCase())) {
     return true;
   } else {
     return false;
@@ -35,7 +35,7 @@ animalForm.addEventListener("submit", (event) => {
   if (searchQuery.trim() === "") {
     return;
   }
-  const result = hasAnimal(zooAnimals, searchQuery);
+  const result = hasAnimal(lowerCaseZooAnimals, searchQuery);
   output.textContent = result
     ? `Yes, we have ${searchQuery}`
     : `No, we don't have ${searchQuery}`;

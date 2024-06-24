@@ -43,7 +43,7 @@ fetchDataAndRender();
 
 async function fetchDataAndRender() {
   const res = await fetch("https://swapi.py4e.com/api/people");
-  const data = await res.json(res);
+  const data = await res.json();
   const starWarsPeople = data.results;
 
   console.log(starWarsPeople);

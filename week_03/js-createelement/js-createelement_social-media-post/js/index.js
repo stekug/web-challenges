@@ -34,13 +34,13 @@ function newSocialMediaPost() {
   newButton.innerText = "♥ Like";
   newButton.addEventListener("click", handleLikeButtonClick);
 
+  newArticle.append(postContent, newFooter);
+  newFooter.append(newSpan, newButton);
   bodyElement.append(newArticle);
-  newArticle.append(postContent);
-  newArticle.append(newFooter);
-  newFooter.append(newSpan);
-  newFooter.append(newButton);
+  // newArticle.append(postContent);
+  // newArticle.append(newFooter);
+  // newFooter.append(newSpan);
+  // newFooter.append(newButton);
 }
 
-newSocialMediaPost();
-newSocialMediaPost();
 newSocialMediaPost();
