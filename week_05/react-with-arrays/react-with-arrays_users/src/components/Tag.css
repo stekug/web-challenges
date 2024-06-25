@@ -1,0 +1,11 @@
+.tag {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background-color: var(--color-granite);
+  color: var(--color-foam);
+}
+
+.tag--highlight {
+  background-color: var(--color-nemo);
+  /* color: var(--color-nemo); */
+}
