@@ -17,15 +17,19 @@
 .card--yellow {
   background-color: lightyellow;
 }
+
 .card--brown {
   background-color: rgb(99, 63, 10);
 }
+
 .card--orange {
   background-color: rgb(255, 153, 0);
 }
+
 .card--blue {
   background-color: rgb(51, 129, 180);
 }
+
 .card--purple {
   background-color: rgb(200, 120, 216);
 }
