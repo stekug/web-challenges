@@ -4,8 +4,8 @@ import Button from "../Button";
 export default function EntryForm({ onAddEntry }) {
   function handleSubmit(event) {
     event.preventDefault();
-    const formElements = new FormData(event.target);
-    const data = Object.fromEntries(formElements);
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
     onAddEntry(data);
     event.target.reset();
   }
