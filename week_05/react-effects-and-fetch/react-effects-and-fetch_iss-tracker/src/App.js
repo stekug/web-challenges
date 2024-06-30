@@ -3,38 +3,24 @@ import Controls from "./components/Controls";
 import Map from "./components/Map";
 import "./styles.css";
 
-const URL = "https://api.wheretheiss.at/v1/satellites/25544";
+const fetchURL = "https://api.wheretheiss.at/v1/satellites/25544";
 
 export default function App() {
   const [coords, setCoords] = useState();
 
-  const [count, setCount] = useState(0);
-
-  function refreshHandler() {
-    setCount(count + 1);
-  }
-
-  // console.log("Count", count);
-
   useEffect(() => {
-    async function getISSCoords() {
-      const res = await fetch(URL);
-      // console.log(res);
-      const data = await res.json();
-      // console.log(data);
-      setCoords({ longitude: data.longitude, latitude: data.latitude });
-    }
-
     getISSCoords();
-
-    const interval = setInterval(() => {
-      setCount((oldCount) => oldCount + 1);
-    }, 5000);
-
+    const interval = setInterval(getISSCoords, 5000);
     return () => {
       clearInterval(interval);
     };
-  }, [count]);
+  }, []);
+
+  const getISSCoords = async () => {
+    const res = await fetch(fetchURL);
+    const data = await res.json();
+    setCoords({ longitude: data.longitude, latitude: data.latitude });
+  };
 
   if (!coords) {
     return null;
@@ -44,9 +30,9 @@ export default function App() {
     <main>
       <Map longitude={coords.longitude} latitude={coords.latitude} />
       <Controls
+        onRefresh={getISSCoords}
         longitude={coords.longitude}
         latitude={coords.latitude}
-        onRefresh={refreshHandler}
       />
     </main>
   );
