@@ -10,7 +10,7 @@ export default function VolumeDetail() {
   const volumeIndex = volumes.findIndex(
     (element) => element.slug.toLowerCase() === slug
   );
-  console.log(volumeIndex);
+
   const volume = volumes[volumeIndex];
   const nextVolume = volumes[volumeIndex + 1];
   const previousVolume = volumes[volumeIndex - 1];
